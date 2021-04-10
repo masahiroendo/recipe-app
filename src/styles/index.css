@@ -1,4 +1,11 @@
-* {
-    background-color: black;
-    color:cornsilk;
+body {
+    background-color: lightgray;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* empile les uns au-dessus des autres */
+    align-items: center; /* centre horizontallement le block */
+    justify-content: center; /* centre verticallement le block */
 }
