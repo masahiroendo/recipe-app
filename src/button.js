@@ -1,6 +1,7 @@
-const button = document.getElementById("click-test");
-button.addEventListener("click", () => {
-    alert("this button has to fetch recipe");
+import { categorySelectbox } from "./selector";
+
+export const findButton = document.getElementById("fetch-recipe");
+findButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log(categorySelectbox.value);
 });
-
-

@@ -1,4 +1,6 @@
-const selecter = document.getElementById("category-select");
+import { findButton } from "./button";
+
+export const categorySelectbox = document.getElementById("category-select");
 
 const categories = [
   {
@@ -24,7 +26,15 @@ const createCategoryOption = (category) => {
 
   option.text = category.text.toUpperCase();
   option.value = category.value;
-  selecter.appendChild(option);
+  categorySelectbox.appendChild(option);
 };
 
 categories.map(createCategoryOption);
+
+categorySelectbox.addEventListener("change", ({ target: { value } }) => {
+  if (value === "") {
+    findButton.textContent = "Find a recipe";
+    return;
+  }
+  findButton.textContent = `Find a ${value} recipe`;
+});

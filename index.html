@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe App</title>
-    <link rel="stylesheet" type="text/css" href="src/styles/index.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="src/styles/index.css" />
+  </head>
 
-<body>
+  <body>
     <main class="main">
-        <h1>Welcome to random recipe fetcher</h1>
-        <select name="categories" id="category-select" class="category-select"></select>
-        <button id="click-test">Clique là mais comment !</button>
+      <h1>Welcome to random recipe fetcher</h1>
+      <form class="category-form" id="category-form">
+          <select
+            name="categories"
+            id="category-select"
+            class="category-select"
+          ></select>
+          <button type="submit" id="fetch-recipe" class="find-button">Find a recipe</button>
+      </form>
     </main>
 
-    <script src="src/button.js"></script>
-    <script src="src/selector.js"></script>
-</body>
-
+    <script src="src/button.js" type="module"></script>
+    <script src="src/selector.js" type="module"></script>
+  </body>
 </html>
